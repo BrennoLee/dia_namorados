@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #ffe4ec,
+        #fff0f5,
+        #ffffff
+    );
+
+    overflow:hidden;
+}
+
+.login-card{
+
+
+    width:min(90vw, 420px);
+
+    padding:40px 30px;
+
+    background:white;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:
+    0 0 20px rgba(255,105,180,.3),
+    0 0 40px rgba(255,105,180,.2);
+
+
+    animation:fadeIn .8s ease;
+}
+
+h1{
+    color:#ff4f93;
+    margin-bottom:10px;
+
+    text-shadow:
+    0 0 10px #ff9fc5;
+}
+
+.subtitle{
+    margin-bottom:25px;
+    color:#777;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+    text-align:left;
+    margin-bottom:20px;
+}
+
+label{
+    margin-bottom:8px;
+    color:#555;
+    font-weight:600;
+}
+
+input{
+    width:100%;
+
+    padding:14px 16px;
+
+    font-size:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#fafafa;
+
+    outline:none;
+}
+
+input:focus{
+    box-shadow:
+    0 0 10px #ff7db4,
+    0 0 20px #ff7db4;
+}
+
+button{
+
+    width:100%;
+
+    min-height:55px;
+
+    font-size:18px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+    font-weight:bold;
+
+    color:white;
+
+    background:linear-gradient(
+        90deg,
+        #ff69b4,
+        #ff4f93
+    );
+
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.03);
+}
+
+#mensagem{
+    margin-top:15px;
+    font-weight:bold;
+}
+
+.heart{
+    position:absolute;
+
+    font-size:25px;
+
+    animation:explode 1.2s forwards;
+
+    pointer-events:none;
+}
+
+@keyframes explode{
+
+    0%{
+        opacity:1;
+        transform:translate(0,0) scale(.5);
+    }
+
+    100%{
+        opacity:0;
+        transform:
+        translate(
+            var(--x),
+            var(--y)
+        )
+        scale(2);
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@media (max-width:480px){
+
+    .login-card{
+
+        width:92vw;
+
+        padding:30px 20px;
+
+    }
+
+    h1{
+
+        font-size:1.8rem;
+
+    }
+
+    .subtitle{
+
+        font-size:.95rem;
+
+    }
+
+}
